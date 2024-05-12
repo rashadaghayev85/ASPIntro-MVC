@@ -1,0 +1,137 @@
+﻿@using ASPintro_MVC.ViewModels
+@model HomeVM
+@* <ul>
+    <li>Eli</li>
+    <li>Veli</li>
+    <li>Pirveli</li>
+</ul> *@
+
+@* <h1>@Model.Text</h1>
+<ul>
+    @foreach(var item in Model.Students)
+    {
+    <li>@item</li>
+    }
+</ul>
+
+
+<ul>
+    @for (int i=0; i<Model.Students.Count;i++)
+    {
+        <li>@Model.Students[i]</li>
+    }
+</ul>
+
+
+<h3>Salam User</h3>
+
+@foreach (var item in Model.Users)
+{
+    <h3>@(item.Id+" "+item.Age)</h3>
+} *@
+<h1>Students</h1>
+<table border="1">
+    <thead>
+
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>PhoneNumber</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model.Student)
+        {
+            <tr>
+
+                <td>@item.Name </td>
+                <td>@item.Surname</td>
+                <td>@item.Email</td>
+                <td>@item.Age</td>
+                <td>@item.PhoneNumber</td>
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
+<h1>DescendingByAge</h1>
+<table border="1">
+    <thead>
+
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>PhoneNumber</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model.DescendingByAge)
+        {
+            <tr>
+
+                <td>@item.Name </td>
+                <td>@item.Surname</td>
+                <td>@item.Email</td>
+                <td>@item.Age</td>
+                <td>@item.PhoneNumber</td>
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
+
+ <h2>Product count:</h2>
+ <h1>@Model.Product.Count</h1>
+
+
+ <h1>Products</h1>
+
+<table border="1">
+    <thead>
+
+        <tr>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Price</th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        @foreach (var item in Model.Product)
+        {
+            <tr>
+
+                <td>@item.Name </td>
+                <td>@item.Color</td>
+                <td>@item.Price</td>
+               
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
